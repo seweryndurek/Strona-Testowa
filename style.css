@@ -1,0 +1,243 @@
+/*Ogólny html*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "McLaren", sans-serif; /*Z uwagi na brak dołączonego pliku z fontem użytym na zdjęciu z rezultatem, użyłem innego fontu o podobnym charakterze*/
+    height: 100vh;
+}
+h1{
+    color: #fff;
+    font-size: 12vw;
+    font-weight: 900;
+    margin: 0;
+}
+h2{
+    color: #fff;
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin: 0;
+}
+h3{
+    font-size: 2vw;
+    margin: 0;
+    font-weight: 900;
+}
+h4{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+/*Sekcja 1 - Banner strony*/
+.banner{
+    background-color: #fc2e20;
+    background-image: url(images/background2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:right;
+    width: 100%;
+}
+.banner__menu{
+    position: relative;
+    left: 0;
+    font-size: 1.5rem;
+    color: #000;
+    max-height: 60px;
+    margin: 0 auto;
+    padding: 3vw 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+.menu__home{
+    padding-left: 6vw;
+    
+}
+.menu__list{ 
+    padding-right: 6vw;
+    
+}
+.menu__list ul{
+    margin: 0;
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+}
+.menu__list li{
+    list-style: none; 
+}
+.list__link, .menu__home a{
+    text-decoration: none;
+    color: #000;
+    font-size: 2vw;
+}
+.banner__header{
+    width: 55vw;
+    padding: 8vw 6vw;
+}
+.header__button{
+    border-radius: 0;
+    border: none;
+    background-color: #9cfc50;
+    font-family: "McLaren", sans-serif;
+    color: #000;
+    margin: 8vw 0;
+    padding: 1.5vw 9vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+}
+.header__button:hover{
+    color: #fc2e20;
+    background-color: #fff;
+    transition: .25s ease-out;
+}
+/*Sekcja 2 - Opis zabawki*/
+.description{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8vw 20vw;
+}
+.description p{
+    text-align: center;
+}
+p{
+    font-size: 1.3vw;
+}
+/*Sekcja 3 - Wybór produktu*/
+.selection{
+    background-color: #9cfc50;
+    position: relative;
+    padding: 8vw 8vw;
+    text-align: center;
+}
+.selection__container{
+    padding: 4vw 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container__buy{
+    width: 12vw;
+    
+}
+.container__buy--img{
+    width: 12vw;
+}
+.container__buy--button{
+    border-radius: 0;
+    border: none;
+    background-color: #fe7f20;
+    font-family: "McLaren", sans-serif;
+    color: #000;
+    padding: 1vw 4.5vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+}
+.container__buy--button:hover{
+    color: #fe7f20;
+    background-color: #fff;
+    transition: .25s ease-out;
+}
+/*Sekcja 4 - Zasady gry*/
+.rules{
+    background-image: url(images/bg-grid2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vw 6vw;
+    
+}
+.rules__description{
+    width: 50vw;
+    text-align: left;
+}
+.rules__image{
+}
+.rules__image--photo{
+    width: 35vw;
+}
+/*Sekcja 5 - Stopka strony*/
+.footer{
+    background-color: #333333;
+    display: flex;
+    width: 100%;
+   
+}
+.footer__menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-height: 60px;
+    margin: 0;
+    padding: 3vw 0;
+}
+.footer__menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 6vw;
+    margin: 0;
+}
+.footer__menu li{
+    list-style: none;
+}
+.footer__menu--link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+.footer__menu--home{
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #fff;
+}
+/*Punkt responsywności*/
+@media screen and (max-width: 960px){
+    
+    .container__buy{
+    width: 20vw;
+    }
+    .container__buy--img{
+    width: 20vw;
+    }
+    .container__buy--button{
+    padding: 1.3vw 5vw;
+    font-size: 2.5vw;
+    }
+    .rules{
+    background-image: url(images/bg-grid.png);
+    background-position:top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vw 6vw;
+    }
+    .rules__description{
+    width: 75vw;
+    text-align: center;
+    }
+
+    .rules__image--photo{
+    width: 70vw;
+    padding-top: 6vw;
+    }
+    h3{
+    font-size: 2.4vw;
+    }
+    h4{
+    font-size: 1.8vw;    
+    }
+    p{
+    font-size: 2.1vw;
+    }
+}
